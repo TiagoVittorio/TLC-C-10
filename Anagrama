@@ -1,0 +1,53 @@
+#include <iostream>
+#include <locale.h>
+#include <string>
+using namespace std;
+
+void main() {
+    setlocale(LC_ALL, "Portuguese");
+    int i, tamanho, contagem1[26] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }, contagem2[26] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }, corte= 0;
+	char palavra[100], palavra2[100], alfabeto[26] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','u','v','w','x','y','z' };
+	cout << "Diz-me o tamanho da palavra";
+	cin >> tamanho;
+	cout << "\Diz-me a primeira palavra\n";
+	for (i = 0; i < tamanho; i++)
+	{
+		cin >> palavra[i];
+	}
+	cout << "\nDiz-me a segunda palavra\n";
+	for (i = 0; i < tamanho; i++)
+	{
+		cin >> palavra2[i];
+	}
+	
+	for (i = 0;i < 26;i++)
+	{
+		for (int j = 0; j < tamanho; j++)
+		{
+			if (palavra[j] == alfabeto[i])
+			{
+				contagem1[i] = contagem1[i] + 1;
+			}
+			if (palavra2[j] == alfabeto[i])
+			{
+				contagem2[i] = contagem2[i] + 1;
+			}
+		}
+	}
+
+	for (i = 0; i < 26; i++)
+	{
+		if (contagem1[i] == contagem2[i])
+		{
+			corte = corte + 1;
+		}
+	}
+	if (corte == 26)
+	{
+		cout << "São anagramas\n";
+	}
+	else
+	{
+		cout << "Não são anagramas\n";
+	}
+    }
