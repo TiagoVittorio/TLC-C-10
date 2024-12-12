@@ -1,28 +1,27 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project10", "Project10\Project10.vcxproj", "{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}.Debug|x64.ActiveCfg = Debug|x64
-		{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}.Debug|x64.Build.0 = Debug|x64
-		{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}.Debug|x86.ActiveCfg = Debug|Win32
-		{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}.Debug|x86.Build.0 = Debug|Win32
-		{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}.Release|x64.ActiveCfg = Release|x64
-		{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}.Release|x64.Build.0 = Release|x64
-		{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}.Release|x86.ActiveCfg = Release|Win32
-		{FE03EDEE-EAA4-441B-8D56-77DCEFBD37E4}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+#include <iostream>
+#include <locale.h>
+#include <string>
+using namespace std;
+
+void main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    string pessoas[22] = { "Clara", "Abdulah", "André", "Andrei", "Hugo", "Paloma", "João", "Leonardo","Miguel", "Pedro", "Pierre", "Rafael", "Ricardo", "Salvador", "Sartaj","Tiago", "Tomás Filipe", "Ulisses", "Henrise", "Heros", "Tomás", "Tuqeer" };
+    string produtos[6] = { "Batatas Fritas", "Bolo Rei", "Perfume", "Par de Meias", "Pijama", "Chocolate com Ginja" };
+    int totalPessoas = 22, totalProdutos = 6, total[22][6], i, j, totalPorPessoa[22],  totalfinal = 0;
+
+    for ( i = 0; i < totalPessoas; i++) {
+        cout << "Quanto foi dado por " <<  pessoas[i] << "\n";
+        for ( j = 0; j < totalProdutos; j++) {
+            cout << "  " << produtos[j] << ": ";
+            cin >> total[i][j];
+        }
+           }
+    for ( i = 0; i < totalPessoas; i++) {
+        for ( j = 0; j < totalProdutos ; j++) {
+            totalPorPessoa[i] += total[i][j];
+            totalfinal += total[i][j];
+        }
+    }
+    cout << "Total de Produtos: " << totalfinal << "\n";
+    }
