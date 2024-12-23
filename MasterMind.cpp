@@ -1,9 +1,11 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include <locale.h>
 using namespace std;
 void main()
 {
+	setlocale(LC_ALL, "Portuguese");
 	int numeros[4], escolha[4], postitvo = 0, quantidade = 0;
 	srand(time(0));
 
@@ -14,11 +16,10 @@ void main()
 	}
 	do {
 		postitvo= 0;
-		cout << "Adivinha os 4 numeros ( 0/1 ): \n";
+		cout << "Tenta adivinhar os 4 números!!! ( 0/1 ): \n";
 		for (int i = 0; i < 4; i++)
 		{
-			cin >> escolha[i];
-			i + 1;
+			cin >> escolha[i] << i + 1;
 		}
 		for (int i = 0; i < 4; i++)
 		{
@@ -28,10 +29,10 @@ void main()
 			}
 		}
 		quantidade++;
-		cout << "Voce acertou " << postitvo<< "\n";
+		cout << " Acertaste!! " << postitvo<< "\n";
 		if (postitvo == 4)
 		{
-			cout << "Parabens voce  ganhou 1 MILHAO DE DOLARESSSSSSSSS \n" << "Em " << quantidade << " tentativas";
+			cout << "Parabéns ganhaste 1 MILHAO de dolares, pensava que iria ser mais dificil \n" << "Em " << quantidade << " tentativas";
 		}
 	} while (postitvo < 4);
 
