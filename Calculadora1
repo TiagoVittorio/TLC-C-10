@@ -25,33 +25,33 @@ void main() {
 	using namespace std;
 	setlocale(LC_ALL, "Portuguese");
 	int n, op, resultado;
-	cout << "Diz 1 número";
+	cout << "Diz 1 nÃºmero";
 	cin >> n ;
 	do {
 
 
-	cout << "Escolha a operação (1 para multiplicação, 2 para soma, 3 para dividir , 4 para subtrair, 0 a sair): ";
+	cout << "Escolha a operaÃ§Ã£o (1 para multiplicaÃ§Ã£o, 2 para soma, 3 para dividir , 4 para subtrair, 0 a sair): ";
 	cin >> op;
 
 	switch (op) {
 	case 1 :
 		resultado = multi(n);
-		cout << "Multiplicação do números que pediste é de :" << resultado;
+		cout << "MultiplicaÃ§Ã£o do nÃºmeros que pediste Ã© de :" << resultado;
 		break;
 	case 2 :
 		resultado = som(n);
-		cout << "Soma dos números que pediste é de : " << resultado;
+		cout << "Soma dos nÃºmeros que pediste Ã© de : " << resultado;
 		break;
 	case 3:
 		resultado = divi(n);
-		cout << "Divisão dos números que pediste é de : " << resultado ;
+		cout << "DivisÃ£o dos nÃºmeros que pediste Ã© de : " << resultado ;
 		break;
 	case 4:
 		resultado = sub(n);
-		cout << "A subtração dos números que pediste é de : " << resultado ;
+		cout << "A subtraÃ§Ã£o dos nÃºmeros que pediste Ã© de : " << resultado ;
 		break;
 	default :
-		cout << "Opção errada né";
+		cout << "OpÃ§Ã£o errada nÃ©";
 		break;
 	}
 	} while (op!= 0);
