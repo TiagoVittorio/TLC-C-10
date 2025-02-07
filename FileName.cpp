@@ -2,8 +2,8 @@
 #include <string>
 #include <locale.h>
 using namespace std;
-string produtos[5] = { "Batatas", "Cenouras" , "Couves", "Alfaces "," Brócolos"},
-meses[12] = { "Janeiro", "Fevereiro", "Março","Abril","Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro","Dezembro" };
+string produtos[5] = { "Batatas", "Cenouras" , "Couves", "Alfaces "," BrÃ³colos"},
+meses[12] = { "Janeiro", "Fevereiro", "MarÃ§o","Abril","Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro","Dezembro" };
 int quantidade[100][100];
 int TotalP()
 {
@@ -42,7 +42,7 @@ int verfify()
 		{
 			resultado = quantidade[j][i] + resultado;
 		}
-		cout << "Mês de  " << meses[i] << "  Comeste  " << resultado << "\n";
+		cout << "MÃªs de  " << meses[i] << "  Comeste  " << resultado << "\n";
 	}
 	return 0;
 }
@@ -52,7 +52,7 @@ void main()
 	int resposta;
 	do
 	{
-		cout << " Queres fazer o quê?\nCalcular totais mensais - 1\nCalcular totais por preoduto - 2\nInserir valores - 3\nsair - 0\nIntroduza: ";
+		cout << " Queres fazer o quÃª?\n 1 para Calcular totais mensais \n 2- Calcular totais por preoduto \n 3- Inserir valores \n 0 - para sair\n ";
 		cin >> resposta;
 		switch (resposta)
 		{
