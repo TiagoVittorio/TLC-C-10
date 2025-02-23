@@ -5,38 +5,38 @@ void main()
 {
 	setlocale(LC_ALL, "Portuguese");
 	int i;
-	float febreinicial[2], febrefinal[2], febre1 = 0, febre2 = 0;
+	float FI[2], FF[2], F1 = 0, F2 = 0;
 
 
 
 
 	for (i = 0; i < 2; i++)
 	{
-		cin >> febreinicial[i];
+		cin >> FI[i];
 	}
 	for (i = 0; i < 2; i++)
 	{
-		cin >> febrefinal[i];
+		cin >> FF[i];
 	}
-	febre1 = febre1 + febreinicial[0] + febreinicial[1] / 100;
-	febre2 = febre2 + febrefinal[0] + febrefinal[1] / 100;
-	if (febre2 < 37)
+	F1 = F1 + FI[0] + FI[1] / 100;
+	F2 = F2 + FI[0] +FI[1] / 100;
+	if (F2 < 37)
 	{
-		cout << "Normal";
+		cout << "Está estado Normal";
 	}
 	else
 	{
-		if (febre1 == febre2)
+		if (F1 == F	2
 		{
-			cout << "febre manteve";
+			cout << " Esta febre manteve";
 		}
-		if (febre1 > febre2)
+		if (F1 > F2)
 		{
-			cout << "febre diminuiu";
-		}
-		if (febre1 < febre2)
+			cout << "Esta febre diminuiu";
+		
+		if (F1 < F2)
 		{
-			cout << "febre aumentou";
+			cout << "Esta febre aumentou";
 		}
 
 	}
